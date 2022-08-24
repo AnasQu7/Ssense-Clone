@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./productpage.css">
+</head>
+<body>
+<div id="nav">
+</div>
+
+<div id="prod_container">
+     
+    <div id="left_bar"></div>
+     
+     <div id="prod_content">
+         
+         <img src = ""     alt="">
+        </div>
+        
+        <div id="right_bar"></div>
+        
+    </div>
+    <div id="page_btn"></div>
+
+</body>
+</html>
+<script type="module">
+    import nav from "./navbar.js"
+   document.getElementById("nav").innerHTML = nav()
+  
+</script>
+  <script>
+     function productPage(){
+    let x= event.target.innerHTML
+    localStorage.setItem("category_name",x)
+    location.href = "./productpage.html"
+   }
+</script>
+
+<script src="./productpage.js"></script>
+
+
