@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="./navbar.css">
     <link rel="stylesheet" href="./productpage.css">
 </head>
@@ -14,7 +21,15 @@
 
 <div id="prod_container">
      
-    <div id="left_bar"></div>
+    <div id="left_bar">
+        <h4><input type="checkbox"> <span onclick="productPage()">SALE</span> ONLY</h4>
+        <div id="category">
+            <h4>ALL CATEGORIES</h4>
+        </div>
+        <div id="designers">
+            <h4>ALL DESIGNERS</h4>
+        </div>
+    </div>
      
      <div id="prod_content">
          
@@ -40,7 +55,7 @@
     location.href = "./productpage.html"
    }
 </script>
-
+<script src="./lefttext.js"></script>
 <script src="./productpage.js"></script>
 
 
