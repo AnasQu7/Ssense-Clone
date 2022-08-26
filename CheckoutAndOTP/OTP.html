@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verify</title>
+    <style>
+        form{
+    border: 1px solid transparent;
+    width: 20%;
+    margin: auto;
+    padding: 20px;
+    margin-top:100px;
+    font-family: sans-serif;
+    color: black;
+}
+form>label{
+    border: 1px solid transparent;
+    margin-bottom: 50px;
+}
+input[type="number"]{
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom:10px
+}
+input[type="submit"]{
+    font-family: sans-serif;
+    width: 50%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-left: 20%;
+}
+input[type="submit"]:hover{
+    background-color:black;
+    color: white;
+    border: none;
+    cursor:pointer;
+}
+    </style>
+</head>
+<body>
+    <form>
+        <label for="otp">Enter your OTP here: </label>
+        <br>
+        <input type="number" id="otp" placeholder="Enter your OTP here" maxlength=4>
+        <br>
+        <input type="submit" value="Enter">
+        <br>
+    </form>
+</body>
+</html>
+
+<script>
+
+document.querySelector("form").addEventListener("submit", OTPVerify);
+
+
+function OTPVerify() {
+    event.preventDefault();
+    let otp = document.querySelector("#otp").value;
+    if (otp == "1234") {
+        alert("Order placed successfully, Thank YOU 🔅."); 
+       
+    } 
+    else alert("Please enter the correct OTP!");
+}
+
+</script>
