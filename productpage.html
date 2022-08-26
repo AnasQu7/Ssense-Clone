@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/productpage.css">
+</head>
+<body>
+<div id="nav">
+</div>
+
+<div id="prod_container">
+     
+    <div id="left_bar">
+        <h4><input type="checkbox"> <span class="pointer" onclick="productPage()">SALE</span> ONLY</h4>
+        <div id="category">
+            <h4>ALL CATEGORIES</h4>
+            <a href="./index.html"><p class="pointer">HOME</p></a><br>
+            <p class="pointer" onclick="category()">BAG</p><br>
+            <P class="pointer" onclick="clothing()">CLOTHING</P><br>
+            <P class="pointer" onclick="category()">SHOES</P><br>
+
+        </div>
+        <div id="designers">
+            <h4>ALL DESIGNERS</h4>
+        </div>
+    </div>
+     
+     <div id="prod_content">
+         
+         <img src = "https://giphy.com/gifs/mashable-3oEjI6SIIHBdRxXI40" class="error"   alt="">
+        </div>
+        
+        <div id="right_bar">
+            <div id="sort">
+                <h4>SORT</h4><br>
+                <p class="pointer" onclick="latest()">LATEST ARRIVAL</p><br>
+                <p class="pointer" onclick="trending()">TRENDING</p><br>
+                <p class="pointer" onclick="sortLow()">PRICE LOW TO HIGH</p><br>
+                <p class="pointer" onclick="sortHigh()">PRICE HIGH TO LOW</p><br>
+
+            </div>
+            <div id="colors">
+                <h4>COLORS</h4><br>
+                <p class="pointer" onclick="reload()">ALL COLORS</p><br>
+                <p class="pointer" onclick="colors()">Black</p><br>
+                <p class="pointer" onclick="colors()">Blue</p><br>
+                <p class="pointer" onclick="colors()">Brown</p><br>
+                <p class="pointer" onclick="colors()">Burgundy</p><br>
+                <p class="pointer" onclick="colors()">Gray</p><br>
+                <p class="pointer" onclick="colors()">Green</p><br>
+                <p class="pointer" onclick="colors()">Navy</p><br>
+                <p class="pointer" onclick="colors()">Orange</p><br>
+                <p class="pointer" onclick="colors()">Pink</p><br>
+                <p class="pointer" onclick="colors()">Purple</p><br>
+                <p class="pointer" onclick="colors()">Red</p><br>
+                <p class="pointer" onclick="colors()">Tan</p><br>
+                <p class="pointer" onclick="colors()">White</p><br>
+                <p class="pointer" onclick="colors()">Yellow</p><br>
+            </div>
+        </div>
+        
+    </div>
+    <div id="page_btn"></div>
+    <div id="footer">
+
+    </div>
+</body>
+</html>
+<script type="module">
+    import nav from "./scripts/navbar.js"
+   document.getElementById("nav").innerHTML = nav()
+  
+</script>
+  <script>
+     function productPage(){
+    let x= event.target.innerHTML
+    localStorage.setItem("category_name",x)
+    location.href = "./productpage.html"
+   }
+</script>
+<script type="module">
+    import footer from "./scripts/footer.js"
+   document.getElementById("footer").innerHTML = footer()
+</script>
+<script src="./scripts/lefttext.js"></script>
+<script src="./scripts/productpage.js"></script>
+
+
