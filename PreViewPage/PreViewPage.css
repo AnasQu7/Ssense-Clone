@@ -1,0 +1,338 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#mainContainer{
+    width: 100%;
+    margin-top: 65px;
+}
+#container{
+    /* border: 1px solid red; */
+    display: flex;
+    padding: 0px 55px 0px 55px;
+}
+
+*{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.09px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    color: #000;
+}
+h1{
+    text-transform: uppercase;
+}
+#container{
+    display: flex;
+}
+#box1,#box2,#box3{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 24%;
+    /* border: 2px solid black; */
+    /* text-align: center; */
+}
+#box4,#box5{
+    width: 6.5%;
+}
+#box2{
+    display: flex;
+    justify-content: center;
+    width: 34%;
+ 
+    height: 92vh;
+}
+#box2>div>img{
+    height: 50%;
+}
+img{
+    width: 100%;
+    height: 400px;
+  
+}
+.description
+{
+    width: 50%;
+   
+}
+#box3{
+    padding-left: 24px;
+}
+#box3>div>div{
+    width: 100%;
+}
+#box3>div{
+    width: 100%;
+}
+#size{
+    margin: 5px;
+    display: block;
+    width: 100%;
+    height: 35px;
+    margin: 5px 0px 0px 0px;
+    cursor: pointer;
+    
+}
+#btn1,#btn2{
+    margin: 15px 0px 0px 0px;
+    display: inline;
+    width: 50%;
+    border: none;
+    background-color: white;
+    height: 35px;
+    cursor: pointer;
+}
+#btn1{
+    background-color: black;
+    color: white;
+    
+}
+
+#logopng{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    padding-right: 5px;
+}
+#fitpredictor{
+    display: flex;
+    align-items: center;
+    
+}
+p{
+    padding-right: 5px;
+}
+
+
+
+@media all and (min-width:991px) and (max-width:1200px){
+    #container{
+        display: flex;
+        flex-direction: column;
+    }
+    #box1,#box2,#box3{
+        width: 100%;
+    }
+    #box1{
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media all and (min-width:575px) and (max-width:991px){
+    #container{
+        display: flex;
+        flex-direction: column;
+    }
+    #box1,#box2,#box3{
+        width: 100%;
+    }
+    #box1{
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media all and (min-width:0px) and (max-width:575px){
+    #container{
+        display: flex;
+        flex-direction: column;
+    }
+    #box1,#box2,#box3{
+        width: 100%;
+    }
+    #box1{
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+} 
+
+/* Navbar CSS */
+#navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    margin: auto;
+    position: fixed;
+    top: 0px;
+    /* background-color: white; */
+    background-color: transparent;
+    align-items: center;
+}
+#leftPage{
+    width: 33%;
+}
+#leftPage>div:first-child{
+    display: flex;
+    justify-content:space-evenly;
+    height: auto;
+}
+#leftPage>div:first-child>p{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+#leftPage>div:first-child>p:hover{
+    text-decoration: underline;
+}
+#navbar>div:nth-child(2){
+    width: 6%;
+}
+#navbar>div:nth-child(4){
+    width: 11%;
+}
+#navbar>div:nth-child(3){
+    width: 20%;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
+}
+#navbar>div:nth-child(3)>img{
+    width: 100px;
+    height: 21px;
+}
+#rightPage{
+    width: 30%;
+}
+#rightPage>div:first-child{
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+}
+#rightPage>div:first-child>p{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+#rightPage>div:first-child>p:hover{
+    text-decoration: underline;
+}
+#navbar>div>div>p>a{
+    text-decoration: none;
+    color: #000000;
+}
+#allProduct{
+    display: none;
+}
+#cartLogo{
+    display: none;
+}
+
+/* Media Query for medium screen */
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+
+    #allProduct{
+         text-align: center;
+         display: flex;
+         justify-content: space-around;
+         padding: 0px 10px 0px 10px;
+         height: 45px;
+         margin-bottom: 10px;
+     }
+     #allProduct>div{
+         border: 1px solid grey;
+         width: 100%;
+         border-radius: 13px;
+         font-family: 'Open Sans', sans-serif;
+     }
+ 
+     /* product bar */
+     .productbar {
+         overflow: hidden;
+     }
+     .dropdown {
+         float: left;
+         overflow: hidden;
+     }
+       /* Dropdown button */
+     .dropdown .dropbtn {
+         border: none;
+         outline: none;
+         color: black;
+         padding: 14px 16px;
+         background-color: inherit;
+         font-family: inherit;
+         margin: 0; 
+     }
+     
+     .dropdown-content{
+         width: 95%;
+         display: none;
+         position: absolute;
+         background-color: #f9f9f9;
+         z-index: 1;
+         font-size: 11px;
+         font-family: 'Open Sans', sans-serif;
+     }
+     .dropdown-content>span:hover{
+         cursor: pointer;
+         text-decoration: underline;
+     }
+     /* Links inside the dropdown */
+     .dropdown-content span {
+         float: none;
+         color: black;
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+         text-align: left;
+     }
+       /* Show the dropdown menu on hover */
+     .dropdown:hover .dropdown-content {
+         display: block;
+     }
+ 
+     #cartLogo{
+         text-align: center;
+         display: flex;
+         justify-content: space-evenly;
+         margin-bottom: 10px;
+     }
+     #cartLogo>img{
+         width: 20px;
+         height: 20px;
+         cursor: pointer;
+     }
+ 
+ 
+     #leftPage>div:first-child{
+         display: none;
+     }
+     #navbar>div:nth-child(3){
+         width: 100%;
+         margin: auto;
+     }
+     #rightPage>div:first-child{
+         display: none;
+     }
+}
+
+#alsoLike
+{
+    width: 99%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+  
+}
+#alsoLike>div{
+    width: 90%;
+    height: 50%;
+
+} 
+
+
