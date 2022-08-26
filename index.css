@@ -475,7 +475,7 @@ hr{
     gap: 45px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 52px;
+    margin-bottom: 90px;
     margin-top: 30px;
 }
 
@@ -715,4 +715,7 @@ hr{
     #rightPage>div:first-child {
         display: none;
     }
+    }
+    #footer{
+        padding-top: 80px;
     }

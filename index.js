@@ -5,3 +5,7 @@ document.getElementById("navbar").innerHTML= nav();
 
 //****************************************************************************************
 
+import footer from "./footer.js";
+document.getElementById("footer").innerHTML= footer();
+
+//*****************************************************************************************
