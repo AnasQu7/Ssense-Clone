@@ -306,8 +306,8 @@ function addtobag(elem, fit) {
         } else {
             elem.size = fit;
         }
-        WishData.push(elem)
-        localStorage.setItem("bagdata", JSON.stringify(WishData));
+        BagData.push(elem)
+        localStorage.setItem("bagdata", JSON.stringify(BagData));
         window.location.href='../Shopping Bag/ShoppingBag.html'
 
     }

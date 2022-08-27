@@ -184,7 +184,7 @@
    localStorage.setItem("category_name",x)
    location.href = "../productpage.html"
   }
-  let BagData = JSON.parse(localStorage.getItem("bagdata")) || [];
+  BagData = JSON.parse(localStorage.getItem("bagdata")) || [];
 document.querySelector("#countShow").innerText = "("+BagData.length+")";
 document.getElementById("brandLogo").addEventListener("click",()=>{
     location.href="../index.html"

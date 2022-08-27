@@ -181,14 +181,17 @@ font-size: 13px;
 #appendItem>div>div:first-child{
     width: 70%;
     display: flex;
+    text-align: center;
+    object-fit: fit;
 }
 
 #appendItem>div>div:last-child{
     width: 30%;
 }
 #appendItem>div>div:first-child>img{
-    width: 75px;
-    height: 113px;
+    height: 100%;
+    width: 50%;
+    object-fit: contain;
 }
 
 #appendItem>div>div:first-child>div{
