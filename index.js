@@ -1,28 +1,23 @@
-
-let UserFromLS = JSON.parse(localStorage.getItem("UserData")) || [];
-console.log(UserFromLS)
+let UserFromLS= JSON.parse(localStorage.getItem("UserData")) || []
 
 let accou = document.querySelector(".Account");
+if (UserFromLS == "") {
+     
+    accou.innerText = "Login";
+    accou.addEventListener("click", () => {
+        window.location.href='./login&signupPage/login.html'
+    })
+    // accou.append(Log)
+} else {
+    
+    accou.innerText = "Account";
+    accou.addEventListener("click", () => {
+        window.location.href='./Account Details/Account.html'
+    })
 
-function CheckLogin() {
-    if (UserFromLS == "") {
-        let Log = document.createElement("p");
-        Log.innerText = "Login";
-        Log.addEventListener("click", () => {
-            alert("Login")
-        })
-        accou.append(Log)
-    } else {
-        let Accoun = document.createElement("p");
-        Accoun.innerText = "Account";
-        Accoun.addEventListener("click", () => {
-            console.log("hello world")
-            alert("Account")
-        })
-
-        accou.append(Accoun)
-    }
+    // accou.append(Accoun)
 }
+
 
 let menswear = ()=>{
     localStorage.setItem("category_name","menswear")

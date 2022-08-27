@@ -1,3 +1,27 @@
+let UserFromLS= JSON.parse(localStorage.getItem("UserData")) || []
+
+let accou = document.querySelector(".Account");
+if (UserFromLS == "") {
+     
+    accou.innerText = "Login";
+    accou.addEventListener("click", () => {
+        window.location.href='./login&signupPage/login.html'
+    })
+    // accou.append(Log)
+} else {
+    
+    accou.innerText = "Account";
+    accou.addEventListener("click", () => {
+        window.location.href='./Account Details/Account.html'
+    })
+
+    // accou.append(Accoun)
+}
+
+
+
+
+
 if(!navigator.onLine){
   let img = document.createElement("img");
   img.src = "./Internet-Access-Error.jpg"

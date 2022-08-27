@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Previw Page</title>
     <link rel="stylesheet" href="PreViewPage.css">
+    <link rel="stylesheet" href="../styles/footer.css">
 </head>
 
 <body>
@@ -18,10 +19,10 @@
         <div id="leftPage">
      
             <div>
-                <p><a href="">menswear</a></p>
-                <p><a href="">womenswear</a></p>
-                <p><a href="">everything else</a></p>
-                <p>sale</p>
+                <p onclick="productPage()">menswear</p>
+                <p onclick="productPage()">womenswear</p>
+                <p onclick="productPage()">everything else</p>
+                <p onclick="productPage()">sale</p>
                 <p>search</p>
             </div>
 
@@ -33,10 +34,10 @@
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <span id="mens">MENSWEAR</span>
-                        <span id="womens">WOMENSWEAR</span>
-                        <span id="else">EVERYTHING ELSE</span>
-                        <span id="wish">WISHLIST</span>
+                        <span onclick="productPage()" id="mens" class="menswear">MENSWEAR</span>
+                        <span onclick="productPage()" id="womens">WOMENSWEAR</span>
+                        <span onclick="productPage()" id="else">EVERYTHING ELSE</span>
+                        <span id="wish"><a href="../Wishlist/Wishlist.html" style="text-decoration:none;color: black;">WISHLIST</a></span>
                         <span id="search">SEARCH</span>
                     </div>
                 </div>
@@ -58,9 +59,9 @@
             <!-- div for big screen -->
             <div>
                 <p>english</p>
-                <p>account</p>
-                <p><a href="">whishlist</a></p>
-                <p><a href="">shopping bag <span id="countShow">(0)</span></a></p>
+                <p class="Account">account</p>
+                <p><a href="../Wishlist/Wishlist.html">whishlist</a></p>
+                <p><a href="../Shopping Bag/ShoppingBag.html">shopping bag <span id="countShow">(0)</span></a></p>
             </div>
 
             <!-- div for small and medium screen -->
@@ -118,9 +119,68 @@
 
  </div>
 
-  
+  <!-- ************************************************************************************************************************** -->
+  <div id="footer">
+    <div id="foot">
+        <div id="first">
+        <div id="email">
+             <p>NEWSLETTER SIGNUP</p>
+             <p>Sign up for email updates and promotions</p>
+             <input type="email" name="" class="mail" placeholder="EMAIL ADRESS">
+             <div style="display:flex ; ">
+             <input type="checkbox" class="check" style="margin-left: 60px;"><p style="font-size: 10px;">MENSWEAR</p>  
+             <input type="checkbox" class="check" style="margin-left: 20px;"><p style="font-size: 10px;">WOMENSWEAR</p>
+             </div>
+             <input type="submit" class="mail" value="SUBSCRIBE">
+         </div>
+            <div id="text1">
+             <p class="foot_pointer"> COUNTRY/REGION: INDIA</p>
+             <p class="foot_pointer"> NEWSLETTER SIGNUP </p>
+             <p class="foot_pointer"> CUSTOMER CARE LOCATION</p>
+             <p class="foot_pointer"> EDITORIAL ARCHIVE 
+             <p class="foot_pointer"> CAREERS</p> 
+             <p class="foot_pointer"> AFFILIATES</p> 
+             <p class="foot_pointer"> SITEMAP</p>
+            </div>
+            <p id="dis">COUNTRY/REGION: INDIA</p>
+            <div id="icons">
+             <a target="_blank" href="https://www.facebook.com/SSENSEofficial"><img class="icon" src="../foot images/facebook.png" alt=""></a>
+             <a target="_blank" href="https://twitter.com/ssense"><img class="icon" src="../foot images/twitter.png" alt=""></a>
+             <a target="_blank" href="https://www.instagram.com/ssense/"><img class="icon" src="../foot images/instagram.png" alt=""></a>
+             <a target="_blank" href="https://web.whatsapp.com/"><img class="icon" src="../foot images/whatsapp.png" alt=""></a>
+            </div>
+            <div id="text2">
+                <p> © 2022 ssense.com</p>
+                <p class="foot_pointer"> Terms & Conditions</p>
+                <p class="foot_pointer"> Privacy Policy</p>
+                <p class="foot_pointer"> Cookies</p>
+                <p class="foot_pointer"> Accessibility</p>
+            </div>
+         </div>
+       </div>
+     
+</div>
+<!-- ************************************************************************************************************************************* -->
+
 </body>
 
 </html>
-
+<script>
+    function productPage(){
+   let x= event.target.innerHTML
+   localStorage.setItem("category_name",x)
+   location.href = "../productpage.html"
+  }
+  let BagData = JSON.parse(localStorage.getItem("bagdata")) || [];
+document.querySelector("#countShow").innerText = "("+BagData.length+")";
+document.getElementById("brandLogo").addEventListener("click",()=>{
+    location.href="../index.html"
+})
+document.getElementById("accountLogo").addEventListener("click",()=>{
+    location.href="../Account Details/Account.html"
+})
+document.getElementById("shoppingLogo").addEventListener("click",()=>{
+    location.href="../Shopping Bag/ShoppingBag.html"
+})
+</script>
 <script src="PreViewPage.js"></script>

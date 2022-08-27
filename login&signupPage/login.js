@@ -1,7 +1,25 @@
-// import Navbar from "../Navbar.js"
-// console.log(Navbar)
+let UserFromLS= JSON.parse(localStorage.getItem("UserData")) || []
 
-// document.getElementById("navbar").innerHTML=Navbar()
+let accou = document.querySelector(".Account");
+if (UserFromLS == "") {
+     
+    accou.innerText = "Login";
+    accou.addEventListener("click", () => {
+        window.location.href='./login&signupPage/login.html'
+    })
+    // accou.append(Log)
+} else {
+    
+    accou.innerText = "Account";
+    accou.addEventListener("click", () => {
+        window.location.href='../Account Details/Account.html'
+    })
+
+    // accou.append(Accoun)
+}
+
+
+
 
 document.querySelector("form").addEventListener("submit", chkMail);
 

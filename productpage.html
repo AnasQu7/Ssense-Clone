@@ -39,7 +39,7 @@
                         <span onclick="productPage()" id="mens" class="menswear">MENSWEAR</span>
                         <span onclick="productPage()" id="womens">WOMENSWEAR</span>
                         <span onclick="productPage()" id="else">EVERYTHING ELSE</span>
-                        <span id="wish">WISHLIST</span>
+                        <span id="wish"><a href="./Wishlist/Wishlist.html" style="text-decoration:none;color: black;">WISHLIST</a></span>
                         <span id="search">SEARCH</span>
                     </div>
                 </div>
@@ -57,9 +57,9 @@
             <!-- div for big screen -->
             <div>
                 <p>english</p>
-                <p>Login</p>
-                <p><a href="">whishlist</a></p>
-                <p><a href="">shopping bag <span id="countShow">(0)</span></a></p>
+                <p class="Account">account</p>
+                <p><a href="./Wishlist/Wishlist.html">whishlist</a></p>
+                <p><a href="./Shopping Bag/ShoppingBag.html">shopping bag <span id="countShow">(0)</span></a></p>
             </div>
             <!-- div for small and medium screen -->
             <div id="cartLogo">
@@ -176,6 +176,17 @@
     localStorage.setItem("category_name",x)
     location.href = "./productpage.html"
    }
+   let BagData = JSON.parse(localStorage.getItem("bagdata")) || [];
+document.querySelector("#countShow").innerText = "("+BagData.length+")";
+document.getElementById("brandLogo").addEventListener("click",()=>{
+    location.href="./index.html"
+})
+document.getElementById("accountLogo").addEventListener("click",()=>{
+    location.href="./Account Details/Account.html"
+})
+document.getElementById("shoppingLogo").addEventListener("click",()=>{
+    location.href="./Shopping Bag/ShoppingBag.html"
+})
 </script>
 
 <script src="./scripts/lefttext.js"></script>

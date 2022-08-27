@@ -43,14 +43,22 @@ h1{
     width: 6.5%;
 }
 #box2{
+    
     display: flex;
     justify-content: center;
     width: 34%;
- 
     height: 92vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+}
+#box2::-webkit-scrollbar {
+    display: none;
 }
 #box2>div>img{
-    height: 50%;
+    object-fit: contain;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 img{
     width: 100%;

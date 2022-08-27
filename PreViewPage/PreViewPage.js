@@ -1,15 +1,39 @@
-let PreViewDataFromLS = JSON.parse(localStorage.getItem("PreViewData")) || [];
-console.log(PreViewDataFromLS);
+let UserFromLS= JSON.parse(localStorage.getItem("UserData")) || []
+
+let accou = document.querySelector(".Account");
+if (UserFromLS == "") {
+     
+    accou.innerText = "Login";
+    accou.addEventListener("click", () => {
+        window.location.href='./login&signupPage/login.html'
+    })
+    // accou.append(Log)
+} else {
+    
+    accou.innerText = "Account";
+    accou.addEventListener("click", () => {
+        window.location.href='../Account Details/Account.html'
+    })
+
+    // accou.append(Accoun)
+}
+
+
+
+
+
+let elem = JSON.parse(localStorage.getItem("PreViewData"));
+console.log(elem);
 
 let WishData = JSON.parse(localStorage.getItem("wishdata")) || [];
 let BagData = JSON.parse(localStorage.getItem('bagdata')) || []
 
 
-display(PreViewDataFromLS);
+display(elem);
 
 
-function display(PreViewDataFromLS) {
-    PreViewDataFromLS.forEach(function (elem) {
+function display(elem) {
+    
         // left side part
         let div1 = document.createElement("div");
 
@@ -262,7 +286,7 @@ function display(PreViewDataFromLS) {
             div3.append(price, div5);
         }
 
-    })
+
 
 }
 
