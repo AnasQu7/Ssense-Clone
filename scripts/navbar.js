@@ -30,7 +30,7 @@ function nav(){
         <div></div>
         <!-- for logo of navbar -->
         <div>
-            <img id="brandLogo"
+           <img id="brandLogo" onclick="home()"
                 src="https://res.cloudinary.com/ssenseweb/image/upload/v1471963917/web/ssense_logo_v2.svg" alt="Error">
         </div>
         <div></div>
@@ -39,7 +39,7 @@ function nav(){
             <!-- div for big screen -->
             <div>
                 <p>english</p>
-                <p>Login</p>
+                <p class="Account">Login</p>
                 <p><a href="">whishlist</a></p>
                 <p><a href="">shopping bag <span id="countShow">(0)</span></a></p>
             </div>

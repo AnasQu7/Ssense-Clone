@@ -10,7 +10,6 @@ display(PreViewDataFromLS);
 
 function display(PreViewDataFromLS) {
     PreViewDataFromLS.forEach(function (elem) {
-
         // left side part
         let div1 = document.createElement("div");
 
