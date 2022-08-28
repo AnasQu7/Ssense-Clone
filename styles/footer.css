@@ -1,0 +1,133 @@
+#footer{
+    width: 100%;
+    
+}
+#email{
+    display: none;
+}
+#first{
+    width: 80%;
+    margin: auto;
+    display: grid;
+     grid-template-areas: 
+     "text1 icons"
+     "text2 text2";
+     grid-template-rows: repeat(2,1fr);
+     grid-template-columns: 80% 20%;
+     align-items: center;
+     font-size: 12px;
+}
+#icons{
+    
+    grid-area: icons;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+.icon{
+    height: 20px;
+    max-width: 22px;
+}
+
+#text1{
+    
+  
+    grid-area: text1;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+#text2{
+    grid-area: text2;
+    display: flex;
+    justify-content: center;
+}
+#text2>p{
+    color: grey;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.foot_pointer {
+display: inline-block;
+position: relative;
+cursor: pointer;
+color: black;
+}
+
+.foot_pointer:after {
+color: black;
+content: '';
+position: absolute;
+width: 100%;
+transform: scaleX(0);
+height: 1.5px;
+bottom: 0px;
+left: 0;
+background-color: black;
+transform-origin: bottom right;
+transition: transform 0.25s ease-out;
+}
+
+.foot_pointer:hover:after {
+color: black;
+transform: scaleX(1);
+transform-origin: bottom left;
+}
+#dis{
+    display: none;
+}
+@media screen and (min-width: 0px) and (max-width: 1300px){
+    #first{
+        width: 80%;
+        margin: auto;
+        display: grid;
+         grid-template-areas: 
+         "text1 text1"
+         "text2 icons";
+         grid-template-rows: repeat(2,1fr);
+         grid-template-columns: 80% 20%;
+         align-items: center;
+         font-size: 12px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 900px){
+    #text1{
+        display: none;
+    }
+    #first{
+        width: 80%;
+        margin: auto;
+        display: inline;
+         align-items: center;
+         font-size: 12px;
+    }
+    #first>div{
+        margin: auto;
+    }
+    #dis{
+        display: block;
+        text-align: center;
+    }
+    #email{
+        display: block;
+        margin: auto;
+        text-align: center;
+        width: 300px;
+       
+        padding: auto;
+       }
+       #email>p{
+        color: rgb(62, 61, 61);
+       }
+       .mail{
+        width: 200px;
+        height: 30px;
+        border: 1px solid gray;
+        background-color: transparent;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+       }
+
+}
