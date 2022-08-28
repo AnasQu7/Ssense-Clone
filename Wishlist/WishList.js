@@ -19,7 +19,18 @@ if (UserFromLS == "") {
 }
 
 
-
+let menswear = ()=>{
+    localStorage.setItem("category_name","menswear")
+    location.href = "./productpage.html"
+}
+let womenswear = ()=>{
+    localStorage.setItem("category_name","womenswear")
+    location.href = "./productpage.html"
+}
+let everything = ()=>{
+    localStorage.setItem("category_name","everything else")
+    location.href = "./productpage.html"
+}
 
 
 
@@ -60,17 +71,23 @@ EveryThingButton.setAttribute('class','EveryButt')
 // Redirect Link With These Button
 
 document.querySelector('.MensButt').addEventListener("click", (()=>{
-    alert("Go Mens page")
+    
+        localStorage.setItem("category_name","menswear")
+        location.href = "../productpage.html"
+    
+    
 }))
 
 document.querySelector('.WoMensButt').addEventListener("click", (()=>{
-    alert("Go WoMens page")
+    localStorage.setItem("category_name","womenswear")
+    location.href = "../productpage.html"
 }))
 
 
 
 document.querySelector('.EveryButt').addEventListener("click", (()=>{
-    alert("Go Home page")
+    localStorage.setItem("category_name","everything else")
+    location.href = "../productpage.html"
 }))
 
 }
